@@ -1,0 +1,32 @@
+import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
+import AIChatButton from "./AIChatButton";
+import ToggleButton from "./ToggleButton";
+
+
+
+
+export default function Navbar() {
+  return (
+    <header className="sticky top-0 bg-background">
+      <div className="mx-auto flex max-w-3xl flex-wrap justify-between gap-3 px-3 py-4">
+        <nav className="space-x-4 font-medium" >
+          <Link href="/" className="hover:text-gray-400">home</Link>
+          <Link href="/about"  className="hover:text-gray-400">about me</Link>
+          <Link href="/social" className="hover:text-gray-400">social media</Link>
+          <Link href="/contact" className="hover:text-gray-400">contact me</Link>
+        </nav>
+        <div className="flex items-center gap-4">
+         
+          <AIChatButton/>
+          
+          <div className="hover:text-gray-400"><ThemeToggle/></div>
+          
+          
+        </div>
+      </div>
+      <ToggleButton/>
+    </header>
+    
+  );
+}
