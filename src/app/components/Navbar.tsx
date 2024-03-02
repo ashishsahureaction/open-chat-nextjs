@@ -25,7 +25,11 @@ export default function Navbar() {
           
         </div>
       </div>
-      <ToggleButton/>
+      
+      <div className="hidden md:block">
+      <ToggleButton />
+      </div>
+      
     </header>
     
   );
